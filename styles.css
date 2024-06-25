@@ -84,10 +84,12 @@ input:focus, textarea:focus {
 
 .click:hover {
     transform: scale(1.1);
+    filter: brightness(110%)
 }
 
 .click:active { /* when clicked, size decreases*/
     transform: scale(0.8);
+    
 }
 
 .title {
@@ -223,7 +225,6 @@ LANDING PAGE
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .header__me {
@@ -232,18 +233,17 @@ LANDING PAGE
     justify-content: center;
     width: 100%;
     max-width: 450px;
-    overflow: visible;
-    
 }
 
 .header__me--border {
     width: 100%;
     border-radius: 100%;
-    border: 5px solid transparent;
-    background: linear-gradient(orange, violet);
+
+    background: linear-gradient(115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%);
     background-clip: padding-box;
-    padding: 10px;
-    
+    padding: 5px;
 }
 
 .header__para {
