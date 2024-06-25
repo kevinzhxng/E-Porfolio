@@ -19,23 +19,25 @@
     </script>
 </head>
 
-<body>
+<body  onmousemove="moveBackground(event)">
     <section id="landing-page">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/unnamed.png" alt="" />
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link">
-                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a>
+                <li class="nav__link" >
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black"
+                        onclick="toggleModal()">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
+                    <a href="#projects"
+                        class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
                 </li>
-                <li class="nav__link click">
+                <li class="nav__link click" onclick="toggleContrast()">
                     <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black"><i
                             class="fa-solid fa-circle-half-stroke"></i></a>
                 </li>
@@ -49,7 +51,7 @@
                     I'm a <b class="blue">Frontend Software Engineer</b> with a strong
                     passion for building web applications with great user experiences.
                     <br />
-                    Here's a bit more <b class="blue">about me</b>.
+                    Here's a bit more <b class="blue click" onclick="toggleModal()">about me</b>.
                 </p>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/kevin-zhang-31403129b/" target="_blank"
@@ -65,9 +67,11 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
-            <i class="fa-solid fa-envelope"></i>
-        </button>
+        <a href="#landing-page">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
@@ -119,6 +123,7 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
+                <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">Let's have a chat!
                 </h3>
                 <h3 class="modal__sub-title modal__sub-title--contact">I'd love to hear from you!
@@ -147,8 +152,16 @@
                     Thanks for the message! Looking forward to speaking with you soon.
                 </div>
             </div>
-            <i class="fa-solid fa-xmark modal__exit click"></i>
         </div>
+        <img src="./assets/squiggly.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/semi circle.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/circle.svg" class="shape shape--5">
+        <img src="./assets/semi circle.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/squiggly.svg" class="shape shape--8">
     </section>
     <section id="projects">
         <div class="container">
@@ -171,11 +184,11 @@
                                     </p>
                                     <div class="project__description--links">
                                         <a href="https://github.com/kevinzhxng/Watermelon-Cutting-Animation-HTML"
-                                            class="project__description--link">
+                                        target ="_blank" class="project__description--link">
                                             <i class="fa-brands fa-github"></i>
                                         </a>
                                         <a href="https://kevinzhxng.github.io/Watermelon-Cutting-Animation-HTML/"
-                                            class="project__description--link">
+                                        target ="_blank" class="project__description--link">
                                             <i class="fa-solid fa-link"></i>
                                         </a>
                                     </div>
@@ -195,11 +208,11 @@
                                     </p>
                                     <div class="project__description--links">
                                         <a href="https://github.com/kevinzhxng/Treact" target="_blank"
-                                            class="project__description--link">
+                                        target ="_blank" class="project__description--link">
                                             <i class="fa-brands fa-github"></i>
                                         </a>
                                         <a href="https://kevinzhxng.github.io/Treact/" target="_blank"
-                                            class="project__description--link">
+                                        target ="_blank" class="project__description--link">
                                             <i class="fa-solid fa-link"></i>
                                         </a>
                                     </div>
@@ -219,11 +232,11 @@
                                     </p>
                                     <div class="project__description--links">
                                         <a href="https://github.com/kevinzhxng/Library-ECommerce-Project"
-                                            class="project__description--link">
+                                        target ="_blank" class="project__description--link">
                                             <i class="fa-brands fa-github"></i>
                                         </a>
                                         <a href="https://kevinzhxng.github.io/Library-ECommerce-Project/"
-                                            class="project__description--link">
+                                        target ="_blank" class="project__description--link">
                                             <i class="fa-solid fa-link"></i>
                                         </a>
                                     </div>
@@ -243,17 +256,18 @@
                     <img src="./assets/unnamed.png" class="footer__logo" alt="" />
                 </figure>
                 <div class="footer__social--list">
-                    <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white">
-                        GitHub
+                    <a href="https://github.com/kevinzhxng" target ="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
+                        <b>GitHub</b>
                     </a>
-                    <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white">
-                        LinkedIn
+                    <a href="https://www.linkedin.com/in/kevin-zhang-31403129b/" target ="_blank"class="footer__social--link link__hover-effect link__hover-effect--white">
+                        <b>LinkedIn</b>
                     </a>
-                    <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white">
-                        Contact
+                    <a href="#landing-page" class="footer__social--link link__hover-effect link__hover-effect--white"
+                        onclick="toggleModal()">
+                        <b>Contact</b>
                     </a>
-                    <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white">
-                        Resume
+                    <a href="./assets/My Resume (1).pdf" target ="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
+                        <b>Resume</b>
                     </a>
                 </div>
                 <div class="footer__copyright">Copyright &copy 2024 Kevin Zhang</div>
