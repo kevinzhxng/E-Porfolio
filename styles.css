@@ -211,6 +211,7 @@ LANDING PAGE
     max-width: 1000px;
     padding: 0 30px;
     display: flex;
+    z-index: 50;
 }
 
 .header__content {
@@ -220,6 +221,9 @@ LANDING PAGE
 .header__content--me {
     width: 40%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .header__me {
@@ -227,13 +231,19 @@ LANDING PAGE
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 450px;
+    overflow: visible;
+    
 }
 
 .header__me--border {
     width: 100%;
-    border-radius: 15%;
-    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.5)
-
+    border-radius: 100%;
+    border: 5px solid transparent;
+    background: linear-gradient(orange, violet);
+    background-clip: padding-box;
+    padding: 10px;
+    
 }
 
 .header__para {
@@ -546,6 +556,7 @@ PROJECTS
     text-align: center;
     font-size: 48px;
     margin-bottom: 60px;
+    z-index: 60;
 }
 
 
