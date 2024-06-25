@@ -210,6 +210,30 @@ LANDING PAGE
     width: 100%;
     max-width: 1000px;
     padding: 0 30px;
+    display: flex;
+}
+
+.header__content {
+    width: 60%;
+}
+
+.header__content--me {
+    width: 40%;
+    display: flex;
+}
+
+.header__me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.header__me--border {
+    width: 100%;
+    border-radius: 15%;
+    box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.5)
+
 }
 
 .header__para {
