@@ -233,12 +233,13 @@ LANDING PAGE
     justify-content: center;
     width: 100%;
     max-width: 450px;
+    
 }
 
 .header__me--border {
     width: 100%;
     border-radius: 100%;
-
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     background: linear-gradient(115deg,
     rgb(245, 101, 101) 0%,
     rgb(254, 178, 178) 100%);
@@ -680,6 +681,7 @@ SHAPES
 
 .shape {
     position: fixed; /*in the same area (like background)*/
+    opacity: 0.6;
 }
 
 .shape--0 {
